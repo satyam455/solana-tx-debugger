@@ -1,0 +1,36 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "slot": 105,
+    "blockTime": 1790610006,
+    "version": "legacy",
+    "transaction": {
+      "signatures": ["MissingLogsSig111111111111111111111111111111111"],
+      "message": {
+        "header": {
+          "numRequiredSignatures": 1,
+          "numReadonlySignedAccounts": 0,
+          "numReadonlyUnsignedAccounts": 1
+        },
+        "accountKeys": [
+          "MissingLogsPayer1111111111111111111111111111",
+          "MissingLogsProgram111111111111111111111111111"
+        ],
+        "recentBlockhash": "Blockhash111111111111111111111111111111111",
+        "instructions": [
+          {
+            "programIdIndex": 1,
+            "accounts": [0],
+            "data": "G7"
+          }
+        ]
+      }
+    },
+    "meta": {
+      "err": null,
+      "innerInstructions": [],
+      "computeUnitsConsumed": 101
+    }
+  },
+  "id": 1
+}

@@ -1,0 +1,32 @@
+/target/
+/.solana-debug/
+
+# Local capture bundles and debugging output
+/captures/
+/capture/
+/repro/
+/reports/
+
+# Local environment/config
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+tmp/
+temp/
+
+# Coverage/profiling artifacts
+tarpaulin-report.html
+lcov.info
+coverage/

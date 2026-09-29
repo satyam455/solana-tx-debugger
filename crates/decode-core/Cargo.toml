@@ -1,0 +1,16 @@
+[package]
+name = "decode-core"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+bs58.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+trace = { path = "../trace" }
+
+[dev-dependencies]
+serde_json.workspace = true

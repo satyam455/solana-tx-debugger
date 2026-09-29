@@ -1,0 +1,64 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "slot": 104,
+    "blockTime": 1790610005,
+    "version": "legacy",
+    "transaction": {
+      "signatures": ["NestedFailureSig1111111111111111111111111111111"],
+      "message": {
+        "header": {
+          "numRequiredSignatures": 1,
+          "numReadonlySignedAccounts": 0,
+          "numReadonlyUnsignedAccounts": 3
+        },
+        "accountKeys": [
+          "NestedPayer111111111111111111111111111111111",
+          "TopProgram11111111111111111111111111111111111",
+          "CpiProgram11111111111111111111111111111111111",
+          "NestedFailProgram1111111111111111111111111"
+        ],
+        "recentBlockhash": "Blockhash111111111111111111111111111111111",
+        "instructions": [
+          {
+            "programIdIndex": 1,
+            "accounts": [0, 2, 3],
+            "data": "D4"
+          }
+        ]
+      }
+    },
+    "meta": {
+      "err": { "InstructionError": [0, { "Custom": 6001 }] },
+      "innerInstructions": [
+        {
+          "index": 0,
+          "instructions": [
+            {
+              "programIdIndex": 2,
+              "accounts": [0],
+              "data": "E5",
+              "stackHeight": 2
+            },
+            {
+              "programIdIndex": 3,
+              "accounts": [0],
+              "data": "F6",
+              "stackHeight": 3
+            }
+          ]
+        }
+      ],
+      "logMessages": [
+        "Program TopProgram11111111111111111111111111111111111 invoke [1]",
+        "Program CpiProgram11111111111111111111111111111111111 invoke [2]",
+        "Program NestedFailProgram1111111111111111111111111 invoke [3]",
+        "Program NestedFailProgram1111111111111111111111111 failed: custom program error: 0x1771",
+        "Program CpiProgram11111111111111111111111111111111111 failed: custom program error: 0x1771",
+        "Program TopProgram11111111111111111111111111111111111 failed: custom program error: 0x1771"
+      ],
+      "computeUnitsConsumed": 9000
+    }
+  },
+  "id": 1
+}

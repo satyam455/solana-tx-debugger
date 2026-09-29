@@ -1,0 +1,42 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "slot": 101,
+    "blockTime": 1790610002,
+    "version": "legacy",
+    "transaction": {
+      "signatures": ["LegacyFailedSig1111111111111111111111111111111111"],
+      "message": {
+        "header": {
+          "numRequiredSignatures": 1,
+          "numReadonlySignedAccounts": 0,
+          "numReadonlyUnsignedAccounts": 1
+        },
+        "accountKeys": [
+          "LegacyPayer111111111111111111111111111111111",
+          "FailProgram1111111111111111111111111111111111"
+        ],
+        "recentBlockhash": "Blockhash111111111111111111111111111111111",
+        "instructions": [
+          {
+            "programIdIndex": 1,
+            "accounts": [0],
+            "data": "A1"
+          }
+        ]
+      }
+    },
+    "meta": {
+      "err": { "InstructionError": [0, { "Custom": 1 }] },
+      "fee": 5000,
+      "innerInstructions": [],
+      "logMessages": [
+        "Program FailProgram1111111111111111111111111111111111 invoke [1]",
+        "Program log: custom program error",
+        "Program FailProgram1111111111111111111111111111111111 failed: custom program error: 0x1"
+      ],
+      "computeUnitsConsumed": 875
+    }
+  },
+  "id": 1
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": "solana-debug/trace@0.1",
+  "source": "fixture",
+  "signature": "5vFixtureSignature111111111111111111111111111111111111111111111",
+  "slot": 427912340,
+  "block_time": 1790610000,
+  "transaction_version": { "kind": "v0" },
+  "wire_sha256": "sha256:failing-token-program-mismatch",
+  "success": false,
+  "fee_payer": "FeePayer111111111111111111111111111111111111",
+  "accounts": [
+    {
+      "index": 0,
+      "pubkey": "FeePayer111111111111111111111111111111111111",
+      "is_signer": true,
+      "is_writable": true,
+      "source": { "kind": "static" },
+      "owner": "11111111111111111111111111111111",
+      "executable": false,
+      "lamports": 1000000000,
+      "space": 0,
+      "data": null,
+      "snapshot_slot": 427912340
+    },
+    {
+      "index": 1,
+      "pubkey": "DestinationTokenAccount111111111111111111111",
+      "is_signer": false,
+      "is_writable": true,
+      "source": { "kind": "static" },
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFq6qvKxExzS1S1S1S",
+      "executable": false,
+      "lamports": 2039280,
+      "space": 182,
+      "data": {
+        "sha256": "sha256:redacted-token-account",
+        "length": 182,
+        "decoded_type": "spl_token_2022::Account",
+        "redacted": true
+      },
+      "snapshot_slot": 427912340
+    },
+    {
+      "index": 2,
+      "pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "is_signer": false,
+      "is_writable": false,
+      "source": { "kind": "static" },
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "executable": true,
+      "lamports": null,
+      "space": null,
+      "data": null,
+      "snapshot_slot": 427912340
+    }
+  ],
+  "invocations": [
+    {
+      "id": "2",
+      "top_level_instruction": 2,
+      "parent_id": null,
+      "stack_height": 1,
+      "program_id": "ExampleProgram11111111111111111111111111111",
+      "account_indices": [0, 1, 2],
+      "account_pubkeys": [
+        "FeePayer111111111111111111111111111111111111",
+        "DestinationTokenAccount111111111111111111111",
+        "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+      ],
+      "raw_data_base64": "AAECAw==",
+      "decoded": null,
+      "logs": ["Program Example invoke [1]"],
+      "status": "failed",
+      "error": {
+        "code": "Custom(1)",
+        "message": "custom program error: 0x1"
+      },
+      "children": [
+        {
+          "id": "2.1",
+          "top_level_instruction": 2,
+          "parent_id": "2",
+          "stack_height": 2,
+          "program_id": "ATokenGPvoter111111111111111111111111111111",
+          "account_indices": [1, 2],
+          "account_pubkeys": [
+            "DestinationTokenAccount111111111111111111111",
+            "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+          ],
+          "raw_data_base64": "",
+          "decoded": null,
+          "logs": [
+            "Program AToken invoke [2]",
+            "Program log: Error: supplied token program does not match account owner"
+          ],
+          "status": "failed",
+          "error": {
+            "code": "IncorrectProgramId",
+            "message": "supplied token program does not match account owner"
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "logs": [
+    {
+      "invocation_id": "2",
+      "message": "Program Example invoke [1]"
+    },
+    {
+      "invocation_id": "2.1",
+      "message": "Program log: Error: supplied token program does not match account owner"
+    }
+  ],
+  "return_data": null,
+  "compute": {
+    "units_consumed": 19000,
+    "requested_units": 200000
+  },
+  "error": {
+    "code": "InstructionError(2, Custom(1))",
+    "message": "custom program error: 0x1"
+  },
+  "address_lookups": [],
+  "transaction_config": null,
+  "provenance": {
+    "collected_by": "fixture",
+    "rpc_url": null,
+    "commitment": null,
+    "historical_state_complete": false
+  },
+  "trace_quality": "complete"
+}

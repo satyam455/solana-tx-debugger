@@ -1,0 +1,21 @@
+[package]
+name = "solana-debug"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "solana-debug"
+path = "src/main.rs"
+
+[dependencies]
+analyze = { path = "../analyze" }
+anyhow.workspace = true
+clap.workspace = true
+decode-core = { path = "../decode-core" }
+evidence = { path = "../evidence" }
+serde.workspace = true
+solana-debug-rpc = { path = "../rpc" }
+serde_json.workspace = true
+trace = { path = "../trace" }

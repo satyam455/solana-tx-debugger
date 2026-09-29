@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "name": "example",
+  "errors": [
+    {
+      "code": 6001,
+      "name": "ConstraintSeeds",
+      "msg": "A PDA seed constraint was violated"
+    }
+  ]
+}

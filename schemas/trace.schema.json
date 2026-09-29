@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/solana-debug/trace.schema.json",
+  "title": "Solana Debug TransactionTrace",
+  "type": "object",
+  "required": ["schema_version", "source", "transaction_version", "wire_sha256", "success", "fee_payer", "accounts", "invocations", "logs", "compute", "provenance", "trace_quality"],
+  "properties": {
+    "schema_version": { "const": "solana-debug/trace@0.1" },
+    "signature": { "type": ["string", "null"] },
+    "success": { "type": "boolean" },
+    "fee_payer": { "type": "string" },
+    "wire_sha256": { "type": "string" },
+    "trace_quality": { "enum": ["complete", "partial", "ambiguous"] }
+  }
+}
+
